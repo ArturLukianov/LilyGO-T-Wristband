@@ -468,7 +468,7 @@ void loop()
             targetTime = millis() + 1000;
             tft.fillScreen(TFT_BLACK);
             omm = 99;
-            func_select = func_select + 1 > 2 ? 0 : func_select + 1;
+            func_select = func_select + 1;
             digitalWrite(LED_PIN, HIGH);
             delay(100);
             digitalWrite(LED_PIN, LOW);
@@ -493,9 +493,6 @@ void loop()
         RTC_Show();
         break;
     case 1:
-        IMU_Show();
-        break;
-    case 2:
         tft.setTextColor(TFT_GREEN, TFT_BLACK);
         tft.setTextDatum(MC_DATUM);
         tft.drawString("Press again to wake up",  tft.width() / 2, tft.height() / 2 );

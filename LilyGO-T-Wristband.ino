@@ -6,7 +6,9 @@
 #include <WiFi.h>
 #include "sensor.h"
 #include "esp_adc_cal.h"
-#include "ttgo.h"
+
+// Images
+#include "umbrella.h"
 #include "charge.h"
 
 //  git clone -b development https://github.com/tzapu/WiFiManager.git
@@ -322,7 +324,7 @@ void setup(void)
     tft.init();
     tft.setRotation(1);
     tft.setSwapBytes(true);
-    tft.pushImage(0, 0,  160, 80, ttgo);
+    tft.pushImage(0, 0,  160, 80, umbrella);
 
     Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
     Wire.setClock(400000);
